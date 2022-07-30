@@ -22,7 +22,7 @@ app.post('/api/forma', (req, res)=>{
         service:'Gmail', port:465, 
         auth:{
             user:'sharma20arvind@gmail.com',
-            pass: 'Arvind@@96'
+            pass: 'Arv@ind@2'
         }
     });
 
