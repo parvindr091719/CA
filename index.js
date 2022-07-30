@@ -4,14 +4,15 @@ const nodemailer = require('nodemailer')
 const cors = require('cors');
 const { response } = require('express');
 
-const app = express;
+const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors());
 
-app.get('/',()=>{
-    resizeBy.send('Welcome to my forma')
+app.get('/',(req,res)=>{
+    res.send('Welcome to my forma')
+    res.end();
 })
 
 app.post('/api/forma', (req, res)=>{
@@ -21,7 +22,7 @@ app.post('/api/forma', (req, res)=>{
         service:'Gmail', port:465, 
         auth:{
             user:'sharma20arvind@gmail.com',
-            pass: 'Arv@ind2@'
+            pass: 'Arvind@@96'
         }
     });
 
@@ -57,5 +58,3 @@ const PORT = process.env.PORT||3001;
 app.listen(PORT,()=>{
     console.log(`server starting at port ${PORT}`);
 })
-
-
